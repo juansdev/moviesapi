@@ -1,0 +1,5 @@
+﻿Para utilizar SQLServer:
+- Microsoft.EntityFrameworkCore.SqlServer
+
+Para utilizar los comandos de migraciones:
+- Microsoft.EntityFrameworkCore.Tools
