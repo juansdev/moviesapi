@@ -10,4 +10,5 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Gender> Genders { get; set; }
+    public DbSet<Author> Authors { get; set; }
 }

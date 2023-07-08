@@ -10,5 +10,7 @@ public class AutoMapperProfiles : Profile
     {
         CreateMap<Gender, GenderDto>().ReverseMap();
         CreateMap<CreateGenderDto, Gender>();
+        CreateMap<Author, AuthorDto>().ReverseMap();
+        CreateMap<CreateAuthorDto, Author>();
     }
 }
