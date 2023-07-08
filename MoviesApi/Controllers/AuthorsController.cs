@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoviesApi.Dto;
 using MoviesApi.Entities;
+using MoviesApi.Helpers;
 using MoviesApi.Services;
 
 namespace MoviesApi.Controllers;
@@ -25,9 +26,11 @@ public class AuthorsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<AuthorDto>>> Get()
+    public async Task<ActionResult<List<AuthorDto>>> Get([FromQuery] PaginationDto paginationDto)
     {
-        var entities = await _context.Authors.ToListAsync();
+        var queryable = _context.Authors.AsQueryable();
+        await HttpContext.AddParametersPagination(queryable, paginationDto.AmountRegisterByPage);
+        var entities = await queryable.Paginate(paginationDto).ToListAsync();
         return _mapper.Map<List<AuthorDto>>(entities);
     }
 
