@@ -8,8 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Crud fotos de autores en almacenamiento azure">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Services/FileStorageLocal.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="fix: Cambiar la subida de archivos al almacenamiento Azure">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/AuthorPatchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dto/CreateAuthorDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateAuthorDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
     </list>
@@ -37,6 +41,7 @@
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/AuthorsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Dto/CreateAuthorDto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Dto/CreateAuthorDto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2SDB8HIrrppEYoywl8UlrCZ1A2Y" />
@@ -121,7 +126,7 @@
       <updated>1688671114375</updated>
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
-      <workItem from="1688831872745" duration="8827000" />
+      <workItem from="1688831872745" duration="9731000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -186,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688854110071</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: Subir archivos localmente">
+      <created>1688854896558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688854896559</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: Cambiar la subida de archivos al almacenamiento Azure">
+      <created>1688854956294</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688854956294</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +235,9 @@
     <MESSAGE value="feat: Validar imagenes" />
     <MESSAGE value="feat: Configurar servicio Azure Storage" />
     <MESSAGE value="feat: Crud fotos de autores en almacenamiento azure" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Crud fotos de autores en almacenamiento azure" />
+    <MESSAGE value="feat: Subir archivos localmente" />
+    <MESSAGE value="fix: Cambiar la subida de archivos al almacenamiento Azure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Cambiar la subida de archivos al almacenamiento Azure" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

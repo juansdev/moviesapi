@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoviesApi.Dto;
@@ -78,6 +79,24 @@ public class AuthorsController : ControllerBase
                         createAuthorDto.Photo.ContentType);
             }
 
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
+
+    [HttpPatch("{id}")]
+    public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<AuthorPatchDto> patchDocument)
+    {
+        if (patchDocument == null) return BadRequest();
+
+        var entity = await _context.Authors.FirstOrDefaultAsync(author => author.Id == id);
+        if (entity == null) return NotFound();
+
+        var entityDto = _mapper.Map<AuthorPatchDto>(entity);
+        patchDocument.ApplyTo(entityDto, ModelState);
+        var isValid = TryValidateModel(entityDto);
+        if (!isValid) return BadRequest(ModelState);
+
+        _mapper.Map(entityDto, entity);
         await _context.SaveChangesAsync();
         return NoContent();
     }

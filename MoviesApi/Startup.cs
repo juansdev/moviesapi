@@ -21,7 +21,7 @@ public class Startup
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         // Add services to the container.
-        services.AddControllers();
+        services.AddControllers().AddNewtonsoftJson();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

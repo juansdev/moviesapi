@@ -9,3 +9,8 @@ AutoMapper.Extensions.Microsoft.DependencyInjection
 
 Para trabajar con Azure Storage:
 Azure.Storage.Blobs
+
+Para trabajar con el metodo HTTP Patch:
+- Microsoft.AspNetCore.JsonPatch
+- Microsoft.AspNetCore.Mvc.NewtonsoftJson (Trabaja con JSON)
+
