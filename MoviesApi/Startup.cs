@@ -15,7 +15,9 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddAutoMapper(typeof(Startup));
-        services.AddTransient<IFileStorage, FileStorageAzure>();
+        services.AddTransient<IFileStorage, FileStorageLocal>();
+        services.AddHttpContextAccessor();
+        // services.AddTransient<IFileStorage, FileStorageAzure>(); -> PARA ALMACENAR EN AZURE
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         // Add services to the container.
@@ -31,6 +33,8 @@ public class Startup
         }
 
         app.UseHttpsRedirection();
+
+        app.UseStaticFiles();
 
         app.UseRouting();
 

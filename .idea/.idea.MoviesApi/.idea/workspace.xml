@@ -8,9 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Configurar servicio Azure Storage">
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Crud fotos de autores en almacenamiento azure">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Services/FileStorageLocal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/AuthorsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/AuthorsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Dto/CreateAuthorDto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Dto/CreateAuthorDto.cs" root0="SKIP_HIGHLIGHTING" />
@@ -119,7 +121,7 @@
       <updated>1688671114375</updated>
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
-      <workItem from="1688831872745" duration="7943000" />
+      <workItem from="1688831872745" duration="8827000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -177,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688853281441</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: Crud fotos de autores en almacenamiento azure">
+      <created>1688854110071</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688854110071</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +215,8 @@
     <MESSAGE value="feat: Actualizar CreateAuthorDto&#10;&#10;Leer imagenes de autores" />
     <MESSAGE value="feat: Validar imagenes" />
     <MESSAGE value="feat: Configurar servicio Azure Storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Configurar servicio Azure Storage" />
+    <MESSAGE value="feat: Crud fotos de autores en almacenamiento azure" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Crud fotos de autores en almacenamiento azure" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
