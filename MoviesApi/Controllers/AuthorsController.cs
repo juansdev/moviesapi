@@ -37,17 +37,17 @@ public class AuthorsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> Post([FromBody] CreateAuthorDto createAuthorDto)
+    public async Task<ActionResult> Post([FromForm] CreateAuthorDto createAuthorDto)
     {
         var entity = _mapper.Map<Author>(createAuthorDto);
         _context.Add((object)entity);
-        await _context.SaveChangesAsync();
+        // await _context.SaveChangesAsync();
         var dto = _mapper.Map<AuthorDto>(entity);
         return new CreatedAtRouteResult("getAuthor", new { id = entity.Id }, dto);
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult> Put(int id, [FromBody] CreateAuthorDto createAuthorDto)
+    public async Task<ActionResult> Put(int id, [FromForm] CreateAuthorDto createAuthorDto)
     {
         var entity = _mapper.Map<Author>(createAuthorDto);
         entity.Id = id;

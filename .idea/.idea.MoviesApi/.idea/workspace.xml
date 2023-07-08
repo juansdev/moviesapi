@@ -8,22 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/GenderController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateGenderDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/GenderDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/WeatherForecast.cs" beforeDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar AuthorController">
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dto/CreateAuthorDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateAuthorDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +76,7 @@
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
-        <option name="Build" />
-        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_Modo Watch" />
+        <option name="Build" projectName="Selected project" />
       </method>
     </configuration>
     <configuration name="MoviesApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -124,7 +110,7 @@
       <updated>1688671114375</updated>
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
-      <workItem from="1688831872745" duration="2159000" />
+      <workItem from="1688831872745" duration="5007000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -147,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688672754915</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: Agregar Automapper y GenderController&#10;&#10;Eliminar WeatherForecast">
+      <created>1688848747474</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688848747474</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Agregar AuthorController">
+      <created>1688850021420</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688850021420</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,9 +171,30 @@
     <MESSAGE value="Base" />
     <MESSAGE value="refactor: Configuración del proyecto" />
     <MESSAGE value="feat(db): Configurar base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(db): Configurar base de datos" />
+    <MESSAGE value="feat: Agregar Automapper y GenderController&#10;&#10;Eliminar WeatherForecast" />
+    <MESSAGE value="feat: Agregar AuthorController" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar AuthorController" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs</url>
+          <line>41</line>
+          <properties documentPath="C:\laragon\www\MoviesApi\MoviesApi\Controllers\AuthorsController.cs" initialLine="41" containingFunctionPresentation="Method 'Post'">
+            <startOffsets>
+              <option value="1131" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1181" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
