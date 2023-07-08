@@ -6,3 +6,6 @@ Para utilizar los comandos de migraciones:
 
 Para mapear entidades en DTOs:
 AutoMapper.Extensions.Microsoft.DependencyInjection
+
+Para trabajar con Azure Storage:
+Azure.Storage.Blobs
