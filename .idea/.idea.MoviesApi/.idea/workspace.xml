@@ -8,11 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar Patch para autores">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/PaginationDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Helpers/HttpContextExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Helpers/QueryableExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/AuthorsController.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar paginación">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/MoviesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateMovieDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/MovieDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/MoviePatchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +40,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/AuthorsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/AuthorsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/AuthorsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Dto/CreateAuthorDto.cs" root0="SKIP_HIGHLIGHTING" />
@@ -124,7 +130,7 @@
       <updated>1688671114375</updated>
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
-      <workItem from="1688831872745" duration="11040000" />
+      <workItem from="1688831872745" duration="12747000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -210,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688856251916</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: Agregar paginación">
+      <created>1688857013306</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688857013306</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +256,8 @@
     <MESSAGE value="feat: Subir archivos localmente" />
     <MESSAGE value="fix: Cambiar la subida de archivos al almacenamiento Azure" />
     <MESSAGE value="feat: Agregar Patch para autores" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar Patch para autores" />
+    <MESSAGE value="feat: Agregar paginación" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar paginación" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
