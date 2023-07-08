@@ -3,3 +3,6 @@
 
 Para utilizar los comandos de migraciones:
 - Microsoft.EntityFrameworkCore.Tools
+
+Para mapear entidades en DTOs:
+AutoMapper.Extensions.Microsoft.DependencyInjection

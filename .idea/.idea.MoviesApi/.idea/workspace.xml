@@ -8,13 +8,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="refactor: Configuración del proyecto">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/GenderController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateGenderDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/GenderDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/WeatherForecast.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +54,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
@@ -72,12 +83,14 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
         <option name="Build" />
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_Modo Watch" />
       </method>
     </configuration>
     <configuration name="MoviesApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -87,6 +100,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
@@ -95,6 +109,10 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.MoviesApi" />
+      <item itemvalue=".NET Launch Settings Profile.MoviesApi: IIS Express" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,7 +122,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688671114375</updated>
-      <workItem from="1688671115806" duration="1406000" />
+      <workItem from="1688671115806" duration="1637000" />
+      <workItem from="1688674109158" duration="776000" />
+      <workItem from="1688831872745" duration="2159000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -120,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688671345654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(db): Configurar base de datos">
+      <created>1688672754915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688672754915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +170,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Base" />
     <MESSAGE value="refactor: Configuración del proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Configuración del proyecto" />
+    <MESSAGE value="feat(db): Configurar base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(db): Configurar base de datos" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
