@@ -90,6 +90,80 @@ namespace MoviesApi.Migrations
 
                     b.ToTable("Movies");
                 });
+
+            modelBuilder.Entity("MoviesApi.Entities.MoviesAuthors", b =>
+                {
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Character")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.HasKey("AuthorId", "MovieId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("MoviesAuthors");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.MoviesGenders", b =>
+                {
+                    b.Property<int>("GenderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GenderId", "MovieId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("MoviesGenders");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.MoviesAuthors", b =>
+                {
+                    b.HasOne("MoviesApi.Entities.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MoviesApi.Entities.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.MoviesGenders", b =>
+                {
+                    b.HasOne("MoviesApi.Entities.Gender", "Gender")
+                        .WithMany()
+                        .HasForeignKey("GenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MoviesApi.Entities.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gender");
+
+                    b.Navigation("Movie");
+                });
 #pragma warning restore 612, 618
         }
     }

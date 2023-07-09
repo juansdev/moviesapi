@@ -54,16 +54,27 @@ public class MoviesController : ControllerBase
                     await _fileStorage.SaveFile(content, extension, _container, createMovieDto.Poster.ContentType);
             }
 
+        AssignOrderAuthors(movie);
         _context.Add((object)movie);
         await _context.SaveChangesAsync();
         var dto = _mapper.Map<MovieDto>(movie);
         return new CreatedAtRouteResult("getMovie", new { id = movie.Id }, dto);
     }
 
+    private void AssignOrderAuthors(Movie movie)
+    {
+        if (movie.MoviesAuthors != null)
+            for (var i = 0; i < movie.MoviesAuthors.Count; i++)
+                movie.MoviesAuthors[i].Order = i;
+    }
+
     [HttpPut("{id}")]
     public async Task<ActionResult> Put(int id, [FromForm] CreateMovieDto createMovieDto)
     {
-        var movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
+        var movie = await _context.Movies
+            .Include(author => author.MoviesAuthors)
+            .Include(author => author.MoviesGenders)
+            .FirstOrDefaultAsync(movie => movie.Id == id);
         if (movie == null) return NotFound();
 
         movie = _mapper.Map(createMovieDto, movie);
@@ -78,6 +89,7 @@ public class MoviesController : ControllerBase
                         createMovieDto.Poster.ContentType);
             }
 
+        AssignOrderAuthors(movie);
         await _context.SaveChangesAsync();
         return NoContent();
     }
