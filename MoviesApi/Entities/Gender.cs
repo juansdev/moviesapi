@@ -2,9 +2,9 @@
 
 namespace MoviesApi.Entities;
 
-public class Gender
+public class Gender : IId
 {
-    public int Id { get; set; }
     [Required] [StringLength(40)] public string Name { get; set; }
     public List<MoviesGenders> MoviesGenders { get; set; }
+    public int Id { get; set; }
 }

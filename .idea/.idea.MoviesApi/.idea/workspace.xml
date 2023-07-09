@@ -8,10 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Mostrar data relacionada a pelicula">
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/MoviesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/MoviesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Dto/FilterMovieDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dto/FilterMovieDto.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Aplicar ordenamiento por campos en peliculas">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CustomBaseController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/IId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Author.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Author.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Movie.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +125,7 @@
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
-      <workItem from="1688916378410" duration="11233000" />
+      <workItem from="1688916378410" duration="12688000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -243,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688936698288</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: Aplicar ordenamiento por campos en peliculas">
+      <created>1688937418009</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688937418009</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +291,8 @@
     <MESSAGE value="feat: MoviesAuthor y MoviesGender" />
     <MESSAGE value="feat: Filtro a peliculas" />
     <MESSAGE value="feat: Mostrar data relacionada a pelicula" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Mostrar data relacionada a pelicula" />
+    <MESSAGE value="feat: Aplicar ordenamiento por campos en peliculas" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Aplicar ordenamiento por campos en peliculas" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

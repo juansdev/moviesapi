@@ -12,7 +12,7 @@ namespace MoviesApi.Controllers;
 
 [ApiController]
 [Route("api/movies")]
-public class MoviesController : ControllerBase
+public class MoviesController : CustomBaseController
 {
     private readonly string _container = "movies";
     private readonly ApplicationDbContext _context;
@@ -21,7 +21,7 @@ public class MoviesController : ControllerBase
     private readonly IMapper _mapper;
 
     public MoviesController(ApplicationDbContext context, IMapper mapper, IFileStorage fileStorage,
-        ILogger<MoviesController> logger)
+        ILogger<MoviesController> logger) : base(context, mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -155,29 +155,12 @@ public class MoviesController : ControllerBase
     [HttpPatch("{id}")]
     public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<MoviePatchDto> patchDocument)
     {
-        if (patchDocument == null) return BadRequest();
-
-        var entity = await _context.Movies.FirstOrDefaultAsync(author => author.Id == id);
-        if (entity == null) return NotFound();
-
-        var entityDto = _mapper.Map<MoviePatchDto>(entity);
-        patchDocument.ApplyTo(entityDto, ModelState);
-        var isValid = TryValidateModel(entityDto);
-        if (!isValid) return BadRequest(ModelState);
-
-        _mapper.Map(entityDto, entity);
-        await _context.SaveChangesAsync();
-        return NoContent();
+        return await Patch<Movie, MoviePatchDto>(id, patchDocument);
     }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(int id)
     {
-        var existMovie = await _context.Movies.AnyAsync(author => author.Id == id);
-        if (!existMovie) return NotFound();
-
-        _context.Remove(new Movie { Id = id });
-        await _context.SaveChangesAsync();
-        return NoContent();
+        return await Delete<Movie>(id);
     }
 }

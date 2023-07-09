@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoviesApi.Dto;
 using MoviesApi.Entities;
-using MoviesApi.Helpers;
 using MoviesApi.Services;
 
 namespace MoviesApi.Controllers;
 
 [ApiController]
 [Route("api/authors")]
-public class AuthorsController : ControllerBase
+public class AuthorsController : CustomBaseController
 {
     private readonly string _container = "authors";
     private readonly ApplicationDbContext _context;
     private readonly IFileStorage _fileStorage;
     private readonly IMapper _mapper;
 
-    public AuthorsController(ApplicationDbContext context, IMapper mapper, IFileStorage fileStorage)
+    public AuthorsController(ApplicationDbContext context, IMapper mapper, IFileStorage fileStorage) : base(context,
+        mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -28,20 +28,13 @@ public class AuthorsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<AuthorDto>>> Get([FromQuery] PaginationDto paginationDto)
     {
-        var queryable = _context.Authors.AsQueryable();
-        await HttpContext.AddParametersPagination(queryable, paginationDto.AmountRegisterByPage);
-        var entities = await queryable.Paginate(paginationDto).ToListAsync();
-        return _mapper.Map<List<AuthorDto>>(entities);
+        return await Get<Author, AuthorDto>(paginationDto);
     }
 
     [HttpGet("{id}", Name = "getAuthor")]
     public async Task<ActionResult<AuthorDto>> Get(int id)
     {
-        var entity = await _context.Authors.FirstOrDefaultAsync(author => author.Id == id);
-        if (entity == null) return NotFound();
-
-        var dto = _mapper.Map<AuthorDto>(entity);
-        return dto;
+        return await Get<Author, AuthorDto>(id);
     }
 
     [HttpPost]
@@ -89,29 +82,12 @@ public class AuthorsController : ControllerBase
     [HttpPatch("{id}")]
     public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<AuthorPatchDto> patchDocument)
     {
-        if (patchDocument == null) return BadRequest();
-
-        var entity = await _context.Authors.FirstOrDefaultAsync(author => author.Id == id);
-        if (entity == null) return NotFound();
-
-        var entityDto = _mapper.Map<AuthorPatchDto>(entity);
-        patchDocument.ApplyTo(entityDto, ModelState);
-        var isValid = TryValidateModel(entityDto);
-        if (!isValid) return BadRequest(ModelState);
-
-        _mapper.Map(entityDto, entity);
-        await _context.SaveChangesAsync();
-        return NoContent();
+        return await Patch<Author, AuthorPatchDto>(id, patchDocument);
     }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(int id)
     {
-        var existAuthor = await _context.Authors.AnyAsync(author => author.Id == id);
-        if (!existAuthor) return NotFound();
-
-        _context.Remove(new Author { Id = id });
-        await _context.SaveChangesAsync();
-        return NoContent();
+        return await Delete<Author>(id);
     }
 }
