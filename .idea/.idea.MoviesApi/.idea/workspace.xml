@@ -8,11 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Filtro a peliculas">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/AuthorMovieDetailDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/MovieDetailDto.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Mostrar data relacionada a pelicula">
       <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/MoviesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/MoviesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dto/FilterMovieDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dto/FilterMovieDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,7 @@
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
-      <workItem from="1688916378410" duration="10605000" />
+      <workItem from="1688916378410" duration="11233000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -237,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688932089641</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: Mostrar data relacionada a pelicula">
+      <created>1688936698288</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688936698288</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +280,8 @@
     <MESSAGE value="feat: Agregar MovieController" />
     <MESSAGE value="feat: MoviesAuthor y MoviesGender" />
     <MESSAGE value="feat: Filtro a peliculas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Filtro a peliculas" />
+    <MESSAGE value="feat: Mostrar data relacionada a pelicula" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Mostrar data relacionada a pelicula" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

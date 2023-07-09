@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Linq.Dynamic.Core;
+using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,13 +17,16 @@ public class MoviesController : ControllerBase
     private readonly string _container = "movies";
     private readonly ApplicationDbContext _context;
     private readonly IFileStorage _fileStorage;
+    private readonly ILogger<MoviesController> _logger;
     private readonly IMapper _mapper;
 
-    public MoviesController(ApplicationDbContext context, IMapper mapper, IFileStorage fileStorage)
+    public MoviesController(ApplicationDbContext context, IMapper mapper, IFileStorage fileStorage,
+        ILogger<MoviesController> logger)
     {
         _context = context;
         _mapper = mapper;
         _fileStorage = fileStorage;
+        _logger = logger;
     }
 
     [HttpGet]
@@ -63,6 +67,19 @@ public class MoviesController : ControllerBase
                 .Where(movie => movie.MoviesGenders
                     .Select(movieX => movieX.GenderId)
                     .Contains(filterMovieDto.GenderId));
+
+        if (!string.IsNullOrEmpty(filterMovieDto.FieldOrder))
+        {
+            var typeOrder = filterMovieDto.OrderAsc ? "ascending" : "descending";
+            try
+            {
+                moviesQueryable = moviesQueryable.OrderBy($"{filterMovieDto.FieldOrder} {typeOrder}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+            }
+        }
 
         await HttpContext.AddParametersPagination(moviesQueryable, filterMovieDto.AmountRegisterByPage);
         var movies = await moviesQueryable.Paginate(filterMovieDto.Pagination).ToListAsync();

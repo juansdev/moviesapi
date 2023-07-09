@@ -10,4 +10,6 @@ public class FilterMovieDto
     public int GenderId { get; set; }
     public bool InTheaters { get; set; }
     public bool NextReleases { get; set; }
+    public string FieldOrder { get; set; }
+    public bool OrderAsc { get; set; } = true;
 }

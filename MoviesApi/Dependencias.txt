@@ -14,3 +14,5 @@ Para trabajar con el metodo HTTP Patch:
 - Microsoft.AspNetCore.JsonPatch
 - Microsoft.AspNetCore.Mvc.NewtonsoftJson (Trabaja con JSON)
 
+Para ordenar los Strings:
+- System.Linq.Dynamic.Core
