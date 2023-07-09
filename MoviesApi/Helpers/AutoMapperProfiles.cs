@@ -8,6 +8,9 @@ public class AutoMapperProfiles : Profile
 {
     public AutoMapperProfiles()
     {
+        CreateMap<Cinema, CinemaDto>().ReverseMap();
+        CreateMap<CreateCinemaDto, Cinema>();
+
         CreateMap<Gender, GenderDto>().ReverseMap();
         CreateMap<CreateGenderDto, Gender>();
 

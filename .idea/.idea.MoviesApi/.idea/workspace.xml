@@ -8,13 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Aplicar ordenamiento por campos en peliculas">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CustomBaseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/IId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Author.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Author.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Gender.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="refactor: Refactorizar controladores con CustomBaseController">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CinemaController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CinemaDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateCinemaDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/Cinema.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/MoviesCinemas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Entities/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Entities/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +41,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Entities/Author.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Entities/Author.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Helpers/AutoMapperProfiles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Helpers/AutoMapperProfiles.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,7 +130,7 @@
       <workItem from="1688671115806" duration="1637000" />
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
-      <workItem from="1688916378410" duration="12688000" />
+      <workItem from="1688916378410" duration="14566000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -253,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688937418009</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="refactor: Refactorizar controladores con CustomBaseController">
+      <created>1688939418634</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1688939418634</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +304,8 @@
     <MESSAGE value="feat: Filtro a peliculas" />
     <MESSAGE value="feat: Mostrar data relacionada a pelicula" />
     <MESSAGE value="feat: Aplicar ordenamiento por campos en peliculas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Aplicar ordenamiento por campos en peliculas" />
+    <MESSAGE value="refactor: Refactorizar controladores con CustomBaseController" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Refactorizar controladores con CustomBaseController" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

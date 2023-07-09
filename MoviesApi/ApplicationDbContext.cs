@@ -14,11 +14,15 @@ public class ApplicationDbContext : DbContext
     public DbSet<Movie> Movies { get; set; }
     public DbSet<MoviesAuthors> MoviesAuthors { get; set; }
     public DbSet<MoviesGenders> MoviesGenders { get; set; }
+    public DbSet<Cinema> Cinema { get; set; }
+    public DbSet<MoviesCinemas> MoviesCinemas { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<MoviesAuthors>().HasKey(author => new { author.AuthorId, author.MovieId });
         modelBuilder.Entity<MoviesGenders>().HasKey(author => new { author.GenderId, author.MovieId });
+        modelBuilder.Entity<MoviesCinemas>()
+            .HasKey(moviesCinemas => new { moviesCinemas.MovieId, moviesCinemas.CinemaId });
         SeedData(modelBuilder);
         base.OnModelCreating(modelBuilder);
     }
@@ -26,6 +30,9 @@ public class ApplicationDbContext : DbContext
 
     private void SeedData(ModelBuilder modelBuilder)
     {
+        var accion = new Gender { Id = 1, Name = "Acción" };
+        var comedia = new Gender { Id = 2, Name = "Comedia" };
+        var drama = new Gender { Id = 3, Name = "Drama" };
         var aventura = new Gender { Id = 4, Name = "Aventura" };
         var animation = new Gender { Id = 5, Name = "Animación" };
         var suspenso = new Gender { Id = 6, Name = "Suspenso" };
@@ -34,7 +41,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Gender>()
             .HasData(new List<Gender>
             {
-                aventura, animation, suspenso, romance
+                accion, comedia, drama, aventura, animation, suspenso, romance
             });
 
         var jimCarrey = new Author { Id = 5, Name = "Jim Carrey", BirthdayDate = new DateTime(1962, 01, 17) };

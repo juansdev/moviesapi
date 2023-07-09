@@ -10,5 +10,6 @@ public class Movie : IId
     public string Poster { get; set; }
     public List<MoviesAuthors> MoviesAuthors { get; set; }
     public List<MoviesGenders> MoviesGenders { get; set; }
+    public List<MoviesCinemas> MoviesCinemas { get; set; }
     public int Id { get; set; }
 }

@@ -44,6 +44,44 @@ namespace MoviesApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 5,
+                            BirthdayDate = new DateTime(1962, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jim Carrey"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BirthdayDate = new DateTime(1965, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Robert Downey Jr."
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BirthdayDate = new DateTime(1981, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Chris Evans"
+                        });
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.Cinema", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cinema");
                 });
 
             modelBuilder.Entity("MoviesApi.Entities.Gender", b =>
@@ -62,6 +100,28 @@ namespace MoviesApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 4,
+                            Name = "Aventura"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Animación"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Suspenso"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Romance"
+                        });
                 });
 
             modelBuilder.Entity("MoviesApi.Entities.Movie", b =>
@@ -89,6 +149,43 @@ namespace MoviesApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            InTheaters = true,
+                            ReleaseDate = new DateTime(2019, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Avengers: Endgame"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            InTheaters = false,
+                            ReleaseDate = new DateTime(2019, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Avengers: Infinity Wars"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            InTheaters = false,
+                            ReleaseDate = new DateTime(2020, 2, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Sonic the Hedgehog"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            InTheaters = false,
+                            ReleaseDate = new DateTime(2020, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Emma"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            InTheaters = false,
+                            ReleaseDate = new DateTime(2020, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "Wonder Woman 1984"
+                        });
                 });
 
             modelBuilder.Entity("MoviesApi.Entities.MoviesAuthors", b =>
@@ -110,6 +207,58 @@ namespace MoviesApi.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("MoviesAuthors");
+
+                    b.HasData(
+                        new
+                        {
+                            AuthorId = 6,
+                            MovieId = 2,
+                            Character = "Tony Stark",
+                            Order = 1
+                        },
+                        new
+                        {
+                            AuthorId = 7,
+                            MovieId = 2,
+                            Character = "Steve Rogers",
+                            Order = 2
+                        },
+                        new
+                        {
+                            AuthorId = 6,
+                            MovieId = 3,
+                            Character = "Tony Stark",
+                            Order = 1
+                        },
+                        new
+                        {
+                            AuthorId = 7,
+                            MovieId = 3,
+                            Character = "Steve Rogers",
+                            Order = 2
+                        },
+                        new
+                        {
+                            AuthorId = 5,
+                            MovieId = 4,
+                            Character = "Dr. Ivo Robotnik",
+                            Order = 1
+                        });
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.MoviesCinemas", b =>
+                {
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CinemaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MovieId", "CinemaId");
+
+                    b.HasIndex("CinemaId");
+
+                    b.ToTable("MoviesCinemas");
                 });
 
             modelBuilder.Entity("MoviesApi.Entities.MoviesGenders", b =>
@@ -125,18 +274,65 @@ namespace MoviesApi.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("MoviesGenders");
+
+                    b.HasData(
+                        new
+                        {
+                            GenderId = 6,
+                            MovieId = 2
+                        },
+                        new
+                        {
+                            GenderId = 4,
+                            MovieId = 2
+                        },
+                        new
+                        {
+                            GenderId = 6,
+                            MovieId = 3
+                        },
+                        new
+                        {
+                            GenderId = 4,
+                            MovieId = 3
+                        },
+                        new
+                        {
+                            GenderId = 4,
+                            MovieId = 4
+                        },
+                        new
+                        {
+                            GenderId = 6,
+                            MovieId = 5
+                        },
+                        new
+                        {
+                            GenderId = 7,
+                            MovieId = 5
+                        },
+                        new
+                        {
+                            GenderId = 6,
+                            MovieId = 6
+                        },
+                        new
+                        {
+                            GenderId = 4,
+                            MovieId = 6
+                        });
                 });
 
             modelBuilder.Entity("MoviesApi.Entities.MoviesAuthors", b =>
                 {
                     b.HasOne("MoviesApi.Entities.Author", "Author")
-                        .WithMany()
+                        .WithMany("MoviesAuthors")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("MoviesApi.Entities.Movie", "Movie")
-                        .WithMany()
+                        .WithMany("MoviesAuthors")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -146,16 +342,35 @@ namespace MoviesApi.Migrations
                     b.Navigation("Movie");
                 });
 
+            modelBuilder.Entity("MoviesApi.Entities.MoviesCinemas", b =>
+                {
+                    b.HasOne("MoviesApi.Entities.Cinema", "Cinema")
+                        .WithMany("MoviesCinemas")
+                        .HasForeignKey("CinemaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MoviesApi.Entities.Movie", "Movie")
+                        .WithMany("MoviesCinemas")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cinema");
+
+                    b.Navigation("Movie");
+                });
+
             modelBuilder.Entity("MoviesApi.Entities.MoviesGenders", b =>
                 {
                     b.HasOne("MoviesApi.Entities.Gender", "Gender")
-                        .WithMany()
+                        .WithMany("MoviesGenders")
                         .HasForeignKey("GenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("MoviesApi.Entities.Movie", "Movie")
-                        .WithMany()
+                        .WithMany("MoviesGenders")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -163,6 +378,30 @@ namespace MoviesApi.Migrations
                     b.Navigation("Gender");
 
                     b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.Author", b =>
+                {
+                    b.Navigation("MoviesAuthors");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.Cinema", b =>
+                {
+                    b.Navigation("MoviesCinemas");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.Gender", b =>
+                {
+                    b.Navigation("MoviesGenders");
+                });
+
+            modelBuilder.Entity("MoviesApi.Entities.Movie", b =>
+                {
+                    b.Navigation("MoviesAuthors");
+
+                    b.Navigation("MoviesCinemas");
+
+                    b.Navigation("MoviesGenders");
                 });
 #pragma warning restore 612, 618
         }
