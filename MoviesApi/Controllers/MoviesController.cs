@@ -70,12 +70,15 @@ public class MoviesController : ControllerBase
     }
 
     [HttpGet("{id}", Name = "getMovie")]
-    public async Task<ActionResult<MovieDto>> Get(int id)
+    public async Task<ActionResult<MovieDetailDto>> Get(int id)
     {
-        var movie = await _context.Movies.FirstOrDefaultAsync(author => author.Id == id);
+        var movie = await _context.Movies
+            .Include(movie => movie.MoviesAuthors).ThenInclude(moviesAuthors => moviesAuthors.Author)
+            .Include(movie => movie.MoviesGenders).ThenInclude(moviesGenders => moviesGenders.Gender)
+            .FirstOrDefaultAsync(author => author.Id == id);
         if (movie == null) return NotFound();
-
-        return _mapper.Map<MovieDto>(movie);
+        movie.MoviesAuthors = movie.MoviesAuthors.OrderBy(movie => movie.Order).ToList();
+        return _mapper.Map<MovieDetailDto>(movie);
     }
 
     [HttpPost]
