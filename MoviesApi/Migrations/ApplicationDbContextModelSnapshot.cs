@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MoviesApi;
+using NetTopologySuite.Geometries;
 
 #nullable disable
 
@@ -74,6 +75,9 @@ namespace MoviesApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<Point>("Location")
+                        .HasColumnType("geography");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(120)
@@ -102,6 +106,21 @@ namespace MoviesApi.Migrations
                     b.ToTable("Genders");
 
                     b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Acción"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Comedia"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Drama"
+                        },
                         new
                         {
                             Id = 4,

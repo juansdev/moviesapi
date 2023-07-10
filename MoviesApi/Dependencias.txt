@@ -16,3 +16,6 @@ Para trabajar con el metodo HTTP Patch:
 
 Para ordenar los Strings:
 - System.Linq.Dynamic.Core
+
+Para trabajar con Queries Especiales:
+- Microsfot.EntityFrameworkCore.SqlServer.NetTopologySuite
