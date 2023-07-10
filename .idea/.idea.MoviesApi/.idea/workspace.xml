@@ -8,14 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Sistema de Reviews">
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/BaseTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/Dependencias.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/MoviesApi.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/UnitTests/AuthorsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/UnitTests/GendersControllerTests.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar prueba unitaria MoviesController">
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/UnitTests/MoviesControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +134,7 @@
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
       <workItem from="1688916378410" duration="15907000" />
-      <workItem from="1688997374203" duration="23355000" />
+      <workItem from="1688997374203" duration="24810000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -316,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689025709835</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat: Pruebas unitarias de Generos y Actores">
+      <created>1689030478891</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1689030478891</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,8 +339,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Base" />
-    <MESSAGE value="refactor: Configuración del proyecto" />
     <MESSAGE value="feat(db): Configurar base de datos" />
     <MESSAGE value="feat: Agregar Automapper y GenderController&#10;&#10;Eliminar WeatherForecast" />
     <MESSAGE value="feat: Agregar AuthorController" />
@@ -362,7 +362,9 @@
     <MESSAGE value="feat: Agregar sistema de usuarios" />
     <MESSAGE value="feat: Agregar migraciones de usuarios" />
     <MESSAGE value="feat: Sistema de Reviews" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Sistema de Reviews" />
+    <MESSAGE value="feat: Pruebas unitarias de Generos y Actores" />
+    <MESSAGE value="feat: Agregar prueba unitaria MoviesController" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar prueba unitaria MoviesController" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
