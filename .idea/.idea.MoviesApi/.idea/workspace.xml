@@ -8,19 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar migraciones de usuarios">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/ReviewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateReviewDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/ReviewDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/Review.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Helpers/MovieExistAttribute.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Sistema de Reviews">
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/BaseTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/Dependencias.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/MoviesApi.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/UnitTests/AuthorsControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/UnitTests/GendersControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/CustomBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CustomBaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +48,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MoviesApi.Tests/BaseTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Helpers/AutoMapperProfiles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../WebApiAutores/WebApiAutores/Controllers/V1/AccountController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -142,7 +139,7 @@
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
       <workItem from="1688916378410" duration="15907000" />
-      <workItem from="1688997374203" duration="16267000" />
+      <workItem from="1688997374203" duration="23355000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -312,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689016430821</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="feat: Sistema de Reviews">
+      <created>1689025709835</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689025709835</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +361,8 @@
     <MESSAGE value="feat: Calcular distancias al Cine mediante una ubicación" />
     <MESSAGE value="feat: Agregar sistema de usuarios" />
     <MESSAGE value="feat: Agregar migraciones de usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar migraciones de usuarios" />
+    <MESSAGE value="feat: Sistema de Reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Sistema de Reviews" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
