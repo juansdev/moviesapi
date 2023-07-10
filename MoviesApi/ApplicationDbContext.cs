@@ -20,6 +20,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<MoviesGenders> MoviesGenders { get; set; }
     public DbSet<Cinema> Cinema { get; set; }
     public DbSet<MoviesCinemas> MoviesCinemas { get; set; }
+    public DbSet<Review> Reviews { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

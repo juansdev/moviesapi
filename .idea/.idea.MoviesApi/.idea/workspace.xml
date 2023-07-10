@@ -8,24 +8,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Calcular distancias al Cine mediante una ubicación">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/AccountsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/EditRolDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/UserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/UserInfoDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/UserTokenDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01/storage_v2/_src_/database/MoviesApi.t49Ivg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01/storage_v2/_src_/database/MoviesApi.t49Ivg/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/efCoreDialogsState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/efCoreDialogsState.xml" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar migraciones de usuarios">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/ReviewController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CreateReviewDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/ReviewDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Entities/Review.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Helpers/MovieExistAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/CinemaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CinemasController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/CustomBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CustomBaseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +142,7 @@
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
       <workItem from="1688916378410" duration="15907000" />
-      <workItem from="1688997374203" duration="11768000" />
+      <workItem from="1688997374203" duration="16267000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -303,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689008306049</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: Agregar sistema de usuarios">
+      <created>1689016415022</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689016415022</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: Agregar migraciones de usuarios">
+      <created>1689016430821</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689016430821</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +355,9 @@
     <MESSAGE value="feat: Salas de cine" />
     <MESSAGE value="feat: Agregar longitud y latitud a sala de cine" />
     <MESSAGE value="feat: Calcular distancias al Cine mediante una ubicación" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Calcular distancias al Cine mediante una ubicación" />
+    <MESSAGE value="feat: Agregar sistema de usuarios" />
+    <MESSAGE value="feat: Agregar migraciones de usuarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar migraciones de usuarios" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

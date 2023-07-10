@@ -10,6 +10,12 @@ public class AutoMapperProfiles : Profile
 {
     public AutoMapperProfiles(GeometryFactory geometryFactory)
     {
+        CreateMap<Review, ReviewDto>()
+            .ForMember(review => review.UserName, review => review.MapFrom(reviewDto => reviewDto.User.UserName));
+
+        CreateMap<ReviewDto, Review>();
+        CreateMap<CreateReviewDto, Review>();
+
         CreateMap<Cinema, CinemaDto>()
             .ForMember(cinemaDto => cinemaDto.Latitude, cinema => cinema.MapFrom(cinema => cinema.Location.Y))
             .ForMember(cinemaDto => cinemaDto.Longitude, cinema => cinema.MapFrom(cinema => cinema.Location.X));

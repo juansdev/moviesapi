@@ -27,6 +27,7 @@ public class Startup
         // services.AddTransient<IFileStorage, FileStorageLocal>();
         services.AddHttpContextAccessor();
         services.AddSingleton(NtsGeometryServices.Instance.CreateGeometryFactory(4326));
+        services.AddScoped<MovieExistAttribute>();
         services.AddSingleton(provider =>
             new MapperConfiguration(config =>
             {
