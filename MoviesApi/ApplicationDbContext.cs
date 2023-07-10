@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MoviesApi.Entities;
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
 
 namespace MoviesApi;
 
@@ -30,6 +32,24 @@ public class ApplicationDbContext : DbContext
 
     private void SeedData(ModelBuilder modelBuilder)
     {
+        var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(4326);
+        modelBuilder.Entity<Cinema>().HasData(new List<Cinema>
+        {
+            new()
+            {
+                Id = 4, Name = "Sambil", Location = geometryFactory.CreatePoint(new Coordinate(-69.9118804, 18.4826214))
+            },
+            new()
+            {
+                Id = 5, Name = "Megacentro",
+                Location = geometryFactory.CreatePoint(new Coordinate(-69.856427, 18.506934))
+            },
+            new()
+            {
+                Id = 6, Name = "Village East Cinema",
+                Location = geometryFactory.CreatePoint(new Coordinate(-73.986227, 40.730898))
+            }
+        });
         var accion = new Gender { Id = 1, Name = "Acción" };
         var comedia = new Gender { Id = 2, Name = "Comedia" };
         var drama = new Gender { Id = 3, Name = "Drama" };
