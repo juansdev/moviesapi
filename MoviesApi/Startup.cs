@@ -1,5 +1,9 @@
-﻿using AutoMapper;
+﻿using System.Text;
+using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MoviesApi.Helpers;
 using MoviesApi.Services;
 using NetTopologySuite;
@@ -34,6 +38,20 @@ public class Startup
                 sqlServerOptions => sqlServerOptions.UseNetTopologySuite()));
         // Add services to the container.
         services.AddControllers().AddNewtonsoftJson();
+        services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
+                ClockSkew = TimeSpan.Zero
+            });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

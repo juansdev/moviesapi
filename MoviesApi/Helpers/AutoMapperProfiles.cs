@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using MoviesApi.Dto;
 using MoviesApi.Entities;
 using NetTopologySuite.Geometries;
@@ -23,6 +24,8 @@ public class AutoMapperProfiles : Profile
 
         CreateMap<Gender, GenderDto>().ReverseMap();
         CreateMap<CreateGenderDto, Gender>();
+
+        CreateMap<IdentityUser, UserDto>();
 
         CreateMap<Author, AuthorDto>().ReverseMap();
         CreateMap<CreateAuthorDto, Author>().ForMember(author => author.Photo, options => options.Ignore());

@@ -8,14 +8,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar longitud y latitud a sala de cine">
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CinemaNearDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/CinemaNearFilterDto.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Calcular distancias al Cine mediante una ubicación">
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Controllers/AccountsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/EditRolDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/UserDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/UserInfoDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MoviesApi/Dto/UserTokenDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01/storage_v2/_src_/database/MoviesApi.t49Ivg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01/storage_v2/_src_/database/MoviesApi.t49Ivg/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/efCoreDialogsState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/efCoreDialogsState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/CinemaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CinemaController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/CinemaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/CinemasController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Dependencias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Helpers/AutoMapperProfiles.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +44,23 @@
       </map>
     </option>
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="00aeed06-10c3-4310-9eeb-5d1bf4a410a1" />
+        <option name="url" value="https://github.com/juansdev/moviesapi.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Helpers/AutoMapperProfiles.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../WebApiAutores/WebApiAutores/Controllers/V1/AccountController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2SDB8HIrrppEYoywl8UlrCZ1A2Y" />
@@ -122,7 +147,7 @@
       <workItem from="1688674109158" duration="776000" />
       <workItem from="1688831872745" duration="13408000" />
       <workItem from="1688916378410" duration="15907000" />
-      <workItem from="1688997374203" duration="4543000" />
+      <workItem from="1688997374203" duration="11768000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -271,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688998777025</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: Calcular distancias al Cine mediante una ubicación">
+      <created>1689008306049</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689008306049</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +345,8 @@
     <MESSAGE value="refactor: Refactorizar controladores con CustomBaseController" />
     <MESSAGE value="feat: Salas de cine" />
     <MESSAGE value="feat: Agregar longitud y latitud a sala de cine" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar longitud y latitud a sala de cine" />
+    <MESSAGE value="feat: Calcular distancias al Cine mediante una ubicación" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Calcular distancias al Cine mediante una ubicación" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

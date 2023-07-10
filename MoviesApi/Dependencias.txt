@@ -19,3 +19,9 @@ Para ordenar los Strings:
 
 Para trabajar con Queries Especiales:
 - Microsfot.EntityFrameworkCore.SqlServer.NetTopologySuite
+
+Para utilizar configuración por defecto para la creación de usuarios:
+- Microsoft.AspnetCore.Identity.EntityFrameworkCore
+
+Para crear Token utilizando la técnica JwtBearer:
+- Microsoft.AspNetCore.Authentication.JwtBearer

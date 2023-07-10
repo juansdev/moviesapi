@@ -1,11 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MoviesApi.Entities;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
 
 namespace MoviesApi;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions options) : base(options)
     {
@@ -32,6 +34,35 @@ public class ApplicationDbContext : DbContext
 
     private void SeedData(ModelBuilder modelBuilder)
     {
+        var rolAdminId = "a3090671-5367-4fb4-8e0d-0efdb99d7225";
+        var userAdminId = "9571f5b8-5b04-4efa-be5a-9cf80c3ffda7";
+        var rolAdmin = new IdentityRole
+        {
+            Id = rolAdminId,
+            Name = "Admin",
+            NormalizedName = "Admin"
+        };
+        var passwordHasher = new PasswordHasher<IdentityUser>();
+        var userName = "juansdev72@gmail.com";
+        var userAdmin = new IdentityUser
+        {
+            Id = userAdminId,
+            UserName = userName,
+            NormalizedUserName = userName,
+            Email = userName,
+            NormalizedEmail = userName,
+            PasswordHash = passwordHasher.HashPassword(null, "Aa123456!")
+        };
+        // modelBuilder.Entity<IdentityUser>().HasData(userAdmin);
+        // modelBuilder.Entity<IdentityRole>().HasData(rolAdmin);
+        // modelBuilder.Entity<IdentityUserClaim<string>>()
+        //     .HasData(new IdentityUserClaim<string>()
+        // {
+        //     Id = 1,
+        //     ClaimType = ClaimTypes.Role,
+        //     UserId = userAdminId,
+        //     ClaimValue = "Admin"
+        // });
         var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(4326);
         modelBuilder.Entity<Cinema>().HasData(new List<Cinema>
         {
