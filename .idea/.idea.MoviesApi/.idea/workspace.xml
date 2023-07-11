@@ -8,13 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Configurar pruebas de integración">
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/IntegrationTests/GendersControllerTests.cs" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Agregar prueba de integración GendersController">
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/IntegrationTests/ReviewsControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi.Tests/LocalDbDatabaseInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.Tests/LocalDbDatabaseInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi.Tests/MoviesApi.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.Tests/MoviesApi.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +46,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4ea681aa1df24442c1a5e1e18582b1a2d29ac5bfd41390c94a5d2cc958b5ff/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MoviesApi.Tests/BaseTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi.Tests/BaseTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Helpers/AutoMapperProfiles.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/laragon/www/MoviesApi/MoviesApi/Controllers/GendersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../WebApiAutores/WebApiAutores/Controllers/V1/AccountController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -143,7 +137,7 @@
       <workItem from="1688831872745" duration="13408000" />
       <workItem from="1688916378410" duration="15907000" />
       <workItem from="1688997374203" duration="27399000" />
-      <workItem from="1689034471159" duration="1833000" />
+      <workItem from="1689034471159" duration="2603000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -362,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689035333987</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat: Agregar prueba de integración GendersController">
+      <created>1689036557930</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689036557930</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +384,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: Validar imagenes" />
     <MESSAGE value="feat: Configurar servicio Azure Storage" />
     <MESSAGE value="feat: Crud fotos de autores en almacenamiento azure" />
     <MESSAGE value="feat: Subir archivos localmente" />
@@ -408,7 +408,8 @@
     <MESSAGE value="feat: Crear pruebas unitarias para CinemasController" />
     <MESSAGE value="feat: Crear prueba unitaria ReviewsController" />
     <MESSAGE value="feat: Configurar pruebas de integración" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Configurar pruebas de integración" />
+    <MESSAGE value="feat: Agregar prueba de integración GendersController" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Agregar prueba de integración GendersController" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
