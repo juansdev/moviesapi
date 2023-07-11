@@ -3,3 +3,6 @@ Microsoft.EntityFrameworkCore.Memory
 
 Mock:
 Moq
+
+Pruebas de integración:
+Microsoft.AspNetCore.Mvc.Testing

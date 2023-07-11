@@ -1,7 +1,9 @@
 ﻿using System.Security.Claims;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using MoviesApi.Helpers;
 using NetTopologySuite;
@@ -46,5 +48,27 @@ public class BaseTests
                 User = user
             }
         };
+    }
+
+    protected WebApplicationFactory<Startup> BuildWebApplicationFactory(string nameDb, bool ignoreSegurity = true)
+    {
+        var factory = new WebApplicationFactory<Startup>();
+        factory = factory.WithWebHostBuilder(builder =>
+        {
+            builder.ConfigureTestServices(services =>
+            {
+                var descriptorDbContext =
+                    services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<ApplicationDbContext>));
+                if (descriptorDbContext == null) services.Remove(descriptorDbContext);
+
+                services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase(nameDb));
+                if (ignoreSegurity)
+                {
+                    services.AddSingleton<IAuthorizationHandler, AllowAnonymousHandler>();
+                    services.AddControllers(options => { options.Filters.Add(new UserFalseFilter()); });
+                }
+            });
+        });
+        return factory;
     }
 }
