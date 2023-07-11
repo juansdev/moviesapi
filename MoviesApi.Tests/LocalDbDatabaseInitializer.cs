@@ -9,7 +9,7 @@ namespace MoviesApi.Tests;
 [TestClass]
 public class LocalDbDatabaseInitializer
 {
-    private static readonly string _dbName = "PruebasDeIntegracion";
+    private static readonly string _dbName = "TestsIntegration";
 
     private static string Master =>
         new SqlConnectionStringBuilder

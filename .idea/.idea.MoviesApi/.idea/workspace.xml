@@ -8,13 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/UserFalseFilter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/dataSources/8a75b5cd-cc16-47cc-9399-d5ee393a0a01.xml" afterDir="false" />
+    <list default="true" id="dd14d6a8-1ea5-46cc-8b9a-75dfb6a31f64" name="Changes" comment="feat: Configurar pruebas de integración">
+      <change afterPath="$PROJECT_DIR$/MoviesApi.Tests/IntegrationTests/GendersControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoviesApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi.Tests/BaseTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.Tests/BaseTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesApi.Tests/Dependencias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.Tests/Dependencias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi.Tests/LocalDbDatabaseInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.Tests/LocalDbDatabaseInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoviesApi.Tests/MoviesApi.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.Tests/MoviesApi.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesApi/Controllers/GendersController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.MoviesApi">
+  <component name="RunManager" selected="97610225-7c5e-4e5c-98b7-ea9d1bb0af7b">
     <configuration name="MoviesApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MoviesApi/MoviesApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -143,7 +143,7 @@
       <workItem from="1688831872745" duration="13408000" />
       <workItem from="1688916378410" duration="15907000" />
       <workItem from="1688997374203" duration="27399000" />
-      <workItem from="1689034471159" duration="625000" />
+      <workItem from="1689034471159" duration="1833000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1688671194302</created>
@@ -355,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689034270648</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feat: Configurar pruebas de integración">
+      <created>1689035333987</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1689035333987</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +383,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat: Actualizar CreateAuthorDto&#10;&#10;Leer imagenes de autores" />
     <MESSAGE value="feat: Validar imagenes" />
     <MESSAGE value="feat: Configurar servicio Azure Storage" />
     <MESSAGE value="feat: Crud fotos de autores en almacenamiento azure" />
@@ -401,7 +407,8 @@
     <MESSAGE value="feat: Agregar prueba unitaria AccountController" />
     <MESSAGE value="feat: Crear pruebas unitarias para CinemasController" />
     <MESSAGE value="feat: Crear prueba unitaria ReviewsController" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Crear prueba unitaria ReviewsController" />
+    <MESSAGE value="feat: Configurar pruebas de integración" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Configurar pruebas de integración" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
