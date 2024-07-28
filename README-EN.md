@@ -8,7 +8,7 @@
     <em>MoviesAPI – Simplified Development, Optimized Testing!**By embracing the intricacies of MoviesAPI's configurable solution (MoviesApi.sln), streamlined test execution environment (JetBrains unit testing configuration within Visual Studio solution, MoviesApi.sln.DotSettings.user), and automated test database management (LocalDbDatabaseInitializer.cs), you're set to conquer the world of film with our robust and efficient API ecosystem.Furthermore, the BaseTests.cs files standardized context setup using In-Memory databases, AutoMapper, and custom Authorization handlers streamline testing across the MoviesApi project – making sure your cinematic experience is always top-notch! 🍿🎬</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/juansdev/DDD?style=default&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/license/juansdev/moviesapi?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/juansdev/moviesapi?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/juansdev/moviesapi?style=default&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/juansdev/moviesapi?style=default&color=0080ff" alt="repo-language-count">
