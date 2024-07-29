@@ -307,6 +307,14 @@ The `moviesapi` is a robust software project, primarily developed in C# with.NET
 > ```console
 > $ dotnet build
 > ```
+>
+> 4. Edit the connection to your Microsoft SQL Server database in the "DefaultConnection" key located in the MoviesApi/appsettings.Development.json file.
+>
+> 5. Activate the Microsoft SQL Server.
+>
+> 6. Run the migrations using the command "update-database"
+>
+> 7. Edit the connection to your Azure Storage in the "AzureStorage" key.
 
 ###  Usage
 

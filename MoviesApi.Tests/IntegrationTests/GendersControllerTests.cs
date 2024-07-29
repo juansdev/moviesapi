@@ -22,7 +22,7 @@ public class GendersControllerTests : BaseTests
 
         var genders = JsonConvert.DeserializeObject<List<GenderDto>>(await response.Content.ReadAsStringAsync());
 
-        Assert.AreEqual(6, genders.Count);
+        Assert.AreEqual(7, genders.Count);
     }
 
     // [TestMethod]

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MoviesApi.Helpers;
 using MoviesApi.Services;
 using NetTopologySuite;
@@ -22,6 +23,8 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen();
         services.AddAutoMapper(typeof(Startup));
         services.AddTransient<IFileStorage, FileStorageAzure>();
         // services.AddTransient<IFileStorage, FileStorageLocal>();
@@ -61,6 +64,8 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
 
         app.UseHttpsRedirection();

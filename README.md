@@ -291,14 +291,14 @@ Por último, la configuración del proyecto de pruebas—`MoviesApi.Tests.csproj
 
 ##  Primeros Pasos
 
-**System Requirements:**
+**Requerimientos del Sistema:**
 
 * **CSharp**: `versión 10`
 * **.NET**: `versión 6`
 
 ###  Instalación
 
-<h4>From <code>source</code></h4>
+<h4>Desde <code>source</code></h4>
 
 > 1. Clona el repositorio moviesapi:
 >
@@ -315,10 +315,18 @@ Por último, la configuración del proyecto de pruebas—`MoviesApi.Tests.csproj
 > ```console
 > $ dotnet build
 > ```
+>
+> 4. Edite la conexión a su BD de Microsoft SQL Server en la llave "DefaultConnection" alojada en el archivo MoviesApi/appsettings.Development.json.
+>
+> 5. Active el Servidor Microsoft SQL.
+>
+> 6. Ejecutar las migraciones mediante el comando "update-database"
+> 
+> 7. Edite la conexión a su Almacenamiento de Azure en la llave "AzureStorage".
 
 ###  Uso
 
-<h4>From <code>source</code></h4>
+<h4>Desde <code>source</code></h4>
 
 > Despliega moviesapi usando el comando debajo:
 > ```console
